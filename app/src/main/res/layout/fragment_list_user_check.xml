@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.fragments.ListUserFragment">
+    tools:context=".views.fragments.ListUserCheckFragment">
 
     <TextView
         android:id="@+id/tvListUser"
@@ -12,7 +12,7 @@
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="20sp"
-        android:textColor="@android:color/holo_red_dark"
-        android:text="@string/list_user" />
+        android:textColor="@android:color/holo_red_light"
+        android:text="@string/list_user_check" />
 
 </FrameLayout>

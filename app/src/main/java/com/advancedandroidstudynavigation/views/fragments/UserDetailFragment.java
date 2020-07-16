@@ -8,22 +8,27 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.advancedandroidstudynavigation.R;
+import com.advancedandroidstudynavigation.model.Components;
+import com.advancedandroidstudynavigation.views.ViewModel.AppState;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.navigation.NavArgs;
 import androidx.navigation.NavDirections;
 import androidx.navigation.Navigation;
 
-public class UserDetailFragment extends Fragment implements View.OnClickListener {
+public class UserDetailFragment extends BaseFragment implements View.OnClickListener {
 
     private String dataReceived;
 
     @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        AppState.setComponents(new Components(true, false));
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         assert getArguments() != null;
         this.dataReceived = UserDetailFragmentArgs.fromBundle(getArguments()).getMessageSent();
 

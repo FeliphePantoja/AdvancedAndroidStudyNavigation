@@ -7,19 +7,20 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.advancedandroidstudynavigation.R;
+import com.advancedandroidstudynavigation.model.Components;
+import com.advancedandroidstudynavigation.views.ViewModel.AppState;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
-import static com.advancedandroidstudynavigation.controller.constant.KEY_DICE;
+public class ListUserFragment extends BaseFragment implements View.OnClickListener {
 
-public class ListUserFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        AppState.setComponents(new Components(true, true));
         return inflater.inflate(R.layout.fragment_list_user, container, false);
     }
 

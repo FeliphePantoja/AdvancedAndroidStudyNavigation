@@ -49,4 +49,41 @@
             android:name="Message_sent"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.advancedandroidstudynavigation.views.fragments.LoginFragment"
+        android:label="@string/login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_listUserFragment"
+            app:destination="@id/listUserFragment"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"
+            app:popUpTo="@id/listUserFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_UserRegistrationFragment"
+            app:destination="@id/UserRegistrationFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_loginFragment"
+        app:destination="@id/loginFragment"
+        app:enterAnim="@anim/fragment_fade_enter"
+        app:exitAnim="@anim/fragment_close_exit"
+        app:popEnterAnim="@anim/fragment_open_enter"
+        app:popExitAnim="@anim/fragment_open_exit"
+        app:popUpTo="@id/listUserFragment"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/UserRegistrationFragment"
+        android:name="com.advancedandroidstudynavigation.views.fragments.UserRegistrationFragment"
+        android:label="UserRegistration"
+        tools:layout="@layout/fragment_user_registration" />
+    <fragment
+        android:id="@+id/listUserCheckFragment"
+        android:name="com.advancedandroidstudynavigation.views.fragments.ListUserCheckFragment"
+        android:label="listUserCheckFragment"
+        tools:layout="@layout/fragment_list_user_check" />
 </navigation>

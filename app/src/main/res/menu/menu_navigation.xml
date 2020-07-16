@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/listUserFragment"
+        android:icon="@drawable/ic_list"
+        android:title="@string/navigation_list" />
+
+    <item
+        android:id="@+id/listUserCheckFragment"
+        android:icon="@drawable/ic_check"
+        android:title="@string/navigation_check" />
+
+</menu>
